@@ -1,0 +1,53 @@
+﻿<div ng-form name="myForm" novalidate>
+
+    <div class="modal-header">
+        <div class="cancel pull-right" >
+            <span class="close" ng-click="cancel()">X</span>
+        </div>
+
+
+    </div>
+    <div class="modal-body">
+    
+        
+        <div class="row">
+            <div class="col-md-6 form-group">
+
+                <label for="#name">Product Name </label>
+                <input class="form-control" ng-model="data.product.ProductName"
+                       type="text" placeholder="Product.." id="name"
+                       name="inputProdName" required>
+                <div class="alert alert-warning" ng-show="myForm.inputProdName.$invalid && myForm.inputProdName.$dirty">
+                    Name is required
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-md-6 form-group">
+                <label for="#country">Category: </label>
+
+                <select ng-model="data.categories.selectCategory"
+                        ng-options="item.CategoryName for item in data.categories track by item.CategoryID"
+                        name="selectCategory"
+                        class="form-control"
+                        placeholder="Select.."></select>
+                <div class="alert alert-warning" ng-show="myForm.selectCategory.$invalid">
+                    Required
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="save()">Save</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>
+</div>

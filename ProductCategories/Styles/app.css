@@ -1,0 +1,18 @@
+﻿body {
+    background-color:aliceblue;
+}
+
+.table-fixed tr {
+cursor: pointer;
+}
+
+.modal-dialog {
+  left: auto;
+}
+
+
+.btn-primary.btn-padding {
+ margin-bottom:20px ;
+ 
+}
+ 

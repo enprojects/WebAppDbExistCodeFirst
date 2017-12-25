@@ -3,5 +3,45 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div ng-controller="mainController" style="margin-top:20px" >
+   
+    <input class="btn btn-default btn-primary btn-padding" type="button" value="create" ng-click="crudOperation()" />
+    <div class="row">
+        <div class="panel panel-default">
+            
+             <div class="panel-heading">                
+                <table class="table table-fixed .table-bordered">
+                    <thead>
+                        <tr>
+                            <th  class="col-md-2">ProductID</th>
+                            <th  class="col-md-2">Product Name</th>
+                            <th  class="col-md-2">Qty Per units</th>
+                            <th  class="col-md-2">Category Name</th>
+                            <th  class="col-md-2">Unit Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="prod in products" ng-click="updateRecord(prod)">
+                            <td  class="col-md-2">{{prod.ProductID}}</td>
+                            <td  class="col-md-2">{{prod.ProductName}}</td>
+                            <td  class="col-md-2">{{prod.QuantityPerUnit}}</td>
+                            <td  class="col-md-2">{{categories[prod.CategoryID].CategoryName}}</td>
+                            <td  class="col-md-2">{{prod.UnitPrice}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="container">
+                <h2>Pagination</h2>
+                
+                <ul class="pagination">
+                    <li ng-click="pagination($event)" pagenum="-1"><span class="page-link"><<</span></li>
+                    <li ng-click="pagination($event)" pagenum="1"><span class="page-link">>></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 

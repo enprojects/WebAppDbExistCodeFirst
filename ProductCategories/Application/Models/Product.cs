@@ -8,6 +8,7 @@ namespace ProductCategories
 
     public partial class Product
     {
+        [Key]
         public int ProductID { get; set; }
 
         [Required]

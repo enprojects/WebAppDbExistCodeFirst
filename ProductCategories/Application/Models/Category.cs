@@ -11,7 +11,7 @@ namespace ProductCategories
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            Products = new HashSet<Product>();
+          
         }
 
         public int CategoryID { get; set; }
