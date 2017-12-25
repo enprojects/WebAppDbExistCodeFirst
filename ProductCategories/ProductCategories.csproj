@@ -170,6 +170,7 @@
     <Compile Include="Application\Models\Category.cs" />
     <Compile Include="Controllers\ApiAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RequestObj.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

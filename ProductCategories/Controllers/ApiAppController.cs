@@ -36,10 +36,10 @@ namespace ProductCategories.Controllers
             return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
         }
         [HttpGet]
-        public HttpResponseMessage GetAppData(int  pageNumber)
+        public HttpResponseMessage GetAppData([FromUri]RequestObj obj)
         { 
             var products = appSrv.GetAllProducts().ToList()
-                .Skip( (pageNumber -1)  * pageSize)
+                .Skip( (obj.pageNumber - 1)  * pageSize)
                 .Take(pageSize);
 
 

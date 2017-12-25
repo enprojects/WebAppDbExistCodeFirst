@@ -39,14 +39,23 @@
                     Required
                 </div>
 
-
-
             </div>
 
         </div>
-
+ <label>Favorite launch</label>
+    <div class="form-group">
+        <label class="checkbox-inline">
+            <input type="radio"  value="egg" ng-model="luanch"> Egg
+        </label>
+        <label class="checkbox-inline">
+            <input type="radio"   value="Meet" ng-model="luanch"> Meet
+        </label>
+        <label class="checkbox-inline">
+            <input type="radio"  value="Veg" ng-model="luanch"> Veg
+        </label>
     </div>
-
+    </div>
+   
     <div class="modal-footer">
     <button class="btn btn-primary" ng-click="save()">Save</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>

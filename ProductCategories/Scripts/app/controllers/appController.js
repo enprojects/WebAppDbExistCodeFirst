@@ -8,7 +8,7 @@ app.controller('mainController', ['$scope', 'appService', '$modal', function ($s
 
     $scope.init = function () {
 
-        appService.getAppData({ pageNumber: $scope.pageNumber })
+        appService.getAppData({ pageNumber: $scope.pageNumber, test:null })
 
             .then(function (result) {
 
@@ -43,7 +43,7 @@ app.controller('mainController', ['$scope', 'appService', '$modal', function ($s
             templateUrl: '/HtmlTemplets/HtmlPage1.html',
             windowClass: 'modal', // windowClass - additional CSS class(es) to be added to a modal window template
             controller: function ($scope, $modalInstance, appService, appData) {
-
+               $scope.luanch ='egg';
                 $scope.data = appData;
 
                 if ($scope.data.product) {
